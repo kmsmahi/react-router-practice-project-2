@@ -1,13 +1,12 @@
-import React from 'react';
-import Navbar from '../Components/Navbar/Navbar';
-import { Outlet } from 'react-router';
-
+import Banner from '../Components/Banner/Banner';
 const Home = () => {
-    return (
-        <Navbar></Navbar>
+    return <>
+          <Banner></Banner>
+          
+        </>
         
-
-    );
+        
+    
 };
 
 export default Home;
