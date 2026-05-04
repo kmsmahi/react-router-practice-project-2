@@ -20,6 +20,10 @@ export const router = createBrowserRouter([
         {
             path:'/products',
             element:<Products></Products>,
+            // loader: async()=>{
+            //     const res= await fetch('../../public/furnitureData.json');
+            //     return res.json();
+            // }
         },
         {
             path:'/lists',

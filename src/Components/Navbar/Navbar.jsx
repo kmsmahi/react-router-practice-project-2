@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const Navbar = () => {
     return (
-        <div className="sticky top-0 z-50 w-full px-4 lg:px-10 py-4">
+        <div className=" z-50 w-full px-4 lg:px-10 py-4">
             <div className="navbar bg-[#121212]/80 backdrop-blur-md border border-white/10 rounded-2xl px-6 py-4 shadow-2xl">
                 
                 {/* --- Start Section --- */}
