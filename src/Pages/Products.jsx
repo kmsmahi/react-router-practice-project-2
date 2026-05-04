@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useProducts from "../Hooks/useProducts";
+import { Link } from "react-router";
 
 const Products = () => {
     const { products } = useProducts();
@@ -73,9 +74,9 @@ const Products = () => {
                                     <p className="text-gray-400 text-sm line-clamp-2 font-light">{description}</p>
                                     
                                     <div className="card-actions mt-4 pt-4 border-t border-white/5">
-                                        <button className="btn btn-block bg-white hover:bg-amber-500 hover:text-black text-black border-none transition-all font-bold">
-                                            Add to Cart
-                                        </button>
+                                        <Link to={`/products/${id}`} className="btn btn-block bg-white hover:bg-amber-500 hover:text-black text-black border-none transition-all font-bold">
+                                            Add to cart
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

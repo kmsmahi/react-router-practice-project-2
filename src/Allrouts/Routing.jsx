@@ -3,6 +3,7 @@ import Home from '../Pages/Home';
 import Root from "../Pages/Root";
 import Products from "../Pages/Products";
 import Wishlist from "../Pages/Wishlist";
+import SingleFurnitureDetails from "../Pages/SingleFurniture/SingleFurnitureDetails";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
             path:'/lists',
             element:<Wishlist></Wishlist>,
         },
+        {
+            path:'/products/:id',
+            element:<SingleFurnitureDetails></SingleFurnitureDetails>
+        }
     ]
   },
 ]);
