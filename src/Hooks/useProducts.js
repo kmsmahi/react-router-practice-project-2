@@ -5,7 +5,7 @@ const useProducts = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-          fetch('../furnitureData.json') 
+          fetch('/furnitureData.json') 
             .then((res) => {
                 if (!res.ok) throw new Error("Network response was not ok");
                 return res.json();

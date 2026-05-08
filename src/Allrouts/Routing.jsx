@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
             path:'/',
             element:<Home></Home>,
             loader: async()=>{
-                const res= await fetch('../../public/furnitureData.json');
+                const res= await fetch('/public/furnitureData.json');
                 return res.json();
             }
         },
