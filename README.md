@@ -1,16 +1,54 @@
-# React + Vite
+# 🏛️ Dwellish | High-End Furniture Gallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Dwellish** is a premium, full-stack e-commerce experience designed for the modern interior enthusiast. Built with a focus on minimalist "Midnight" aesthetics, the platform provides a seamless interface for browsing architectural-grade furniture with a focus on high-contrast UI and fluid user interactions.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌓 Design Philosophy
+The interface utilizes a custom **Arctic-Midnight** theme, characterized by:
+*   **Obsidian Depth:** Deep `#121212` backgrounds for reduced eye strain and a premium feel.
+*   **Gold Accents:** Strategic use of `amber-500` for high-conversion call-to-action elements.
+*   **Glassmorphism:** Translucent navigation and card elements for a modern, tiered visual hierarchy.
 
-## React Compiler
+## 🛠️ Tech Stack
+*   **Frontend:** React.js (Vite)
+*   **Styling:** Tailwind CSS + DaisyUI
+*   **Routing:** React Router 7 (Client-side routing)
+*   **State Management:** Custom React Hooks for asynchronous data fetching.
+*   **Data Source:** Localized JSON-based API for rapid prototyping.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Key Features
+*   **Dynamic Product Grid:** Responsive layout optimized for all device sizes.
+*   **Cinematic Product Details:** A dedicated showcase view featuring interactive imagery and smart layout hierarchy.
+*   **Real-time Availability:** Status tags for limited edition and stock availability.
+*   **Advanced Filtering:** Capability for category and material-based browsing.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚠️ Status: Development & Deployment Notice
+
+> **Current Phase:** Beta / Prototyping
+
+This project is currently **Incomplete**. While the core UI/UX and routing logic are implemented, the following features are in active development:
+*   Full Shopping Cart Persistence.
+*   User Authentication & Profile management.
+*   Checkout Integration.
+
+### 🛑 Known Deployment Issues
+We are currently addressing a technical hurdle regarding **SPA (Single Page Application) Routing** on static hosting platforms (Surge/Netlify).
+
+**The Problem:**  
+Refreshing the page on a sub-route (e.g., `/products`) results in a `404` or a `SyntaxError: Unexpected token '<'`. This occurs because the hosting server looks for physical `.html` files for each route, which do not exist in a React Single Page Application.
+
+**The Solution:**  
+I am in the process of configuring the build pipeline to include:
+1.  **Surge:** A `200.html` fallback to ensure the server yields routing control back to React.
+2.  **Netlify:** A `_redirects` rule (`/* /index.html 200`) to handle deep-linking.
+
+---
+
+## 💻 Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/yourusername/dwellish.git](https://github.com/yourusername/dwellish.git)
